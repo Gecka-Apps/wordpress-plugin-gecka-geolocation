@@ -1,0 +1,99 @@
+{
+    "name": "gecka-wp-plugin/gecka-geolocation",
+    "type": "wordpress-plugin",
+    "description": "Downloads the IP geolocation databases of MaxMind (GeoLite or GeoIP®), DB-IP and IPinfo, keeps them up to date, and lets other plugins and WooCommerce locate an IP address on the server.",
+    "keywords": [
+        "wordpress",
+        "plugin",
+        "geoip",
+        "geolocation",
+        "maxmind",
+        "geolite",
+        "dbip",
+        "ipinfo"
+    ],
+    "homepage": "https://gecka.nc",
+    "support": {
+        "issues": "https://github.com/Gecka-Apps/wordpress-plugin-gecka-geolocation/issues",
+        "source": "https://github.com/Gecka-Apps/wordpress-plugin-gecka-geolocation"
+    },
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Laurent Dinclaux",
+            "email": "laurent@gecka.nc"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Gecka\\WP\\Plugin\\Geolocation\\": "inc/core/"
+        },
+        "classmap": [
+            "inc/vendor-prefixed/maxmind-db/"
+        ]
+    },
+    "require": {
+        "php": ">=8.2",
+        "composer/installers": "^2.0",
+        "gecka/wp-admin-menu": "^1.2"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "pestphp/pest-plugin": true
+        },
+        "platform": {
+            "php": "8.3.0"
+        }
+    },
+    "require-dev": {
+        "maxmind-db/reader": "^1.14",
+        "brianhenryie/strauss": "^0.31",
+        "phpstan/phpstan": "^2.2",
+        "szepeviktor/phpstan-wordpress": "^2.0",
+        "wp-coding-standards/wpcs": "^3.4",
+        "phpcompatibility/phpcompatibility-wp": "^2.1",
+        "laravel/pint": "^1.32",
+        "pestphp/pest": "^4.0",
+        "alleyinteractive/pest-plugin-wordpress": "^1.1"
+    },
+    "extra": {
+        "strauss": {
+            "target_directory": "inc/vendor-prefixed",
+            "namespace_prefix": "Gecka\\Geolocation\\Vendor\\",
+            "classmap_prefix": "Gecka_Geolocation_",
+            "constant_prefix": "GECKA_GEOLOCATION_",
+            "packages": [
+                "maxmind-db/reader"
+            ],
+            "include_root_autoload": false,
+            "delete_vendor_packages": false,
+            "delete_vendor_files": false,
+            "exclude_from_copy": {
+                "file_patterns": [
+                    "~maxmind-db/reader/(?!src/|LICENSE$)~"
+                ]
+            },
+            "classmap_output": false
+        }
+    },
+    "scripts": {
+        "prefix": [
+            "rm -rf inc/vendor-prefixed",
+            "strauss",
+            "rm -rf inc/vendor-prefixed/composer inc/vendor-prefixed/autoload.php inc/vendor-prefixed/autoload-classmap.php",
+            "@composer dump-autoload"
+        ],
+        "format": "pint",
+        "lint:php": [
+            "pint --test",
+            "phpcs"
+        ],
+        "analyse": "phpstan analyse --no-progress --memory-limit=2G",
+        "test": "pest",
+        "test:multisite": "WP_MULTISITE=1 pest",
+        "i18n": "bin/i18n",
+        "i18n:check": "bin/i18n --check"
+    }
+}

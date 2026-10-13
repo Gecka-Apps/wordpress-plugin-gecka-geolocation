@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+#
+# Copies the flags of flag-icons into assets/flags/: the SVG files of the
+# two-letter codes, in both shapes (4x3 and 1x1), and the licence. The files
+# of bin/flag-overrides/<shape>/ replace those of the package: the New
+# Caledonia flag of lipis/flag-icons#1475, until a release of flag-icons
+# carries it.
+#
+# A file holding a script, an event handler or an external reference stops
+# the copy.
+#
+# Usage: bin/flags [version]
+
+set -euo pipefail
+
+source=$(cd "$(dirname "$0")/.." && pwd)
+version=${1:-7.5.0}
+target="$source/assets/flags"
+
+mkdir -p "$HOME/Dev/.local/tmp"
+work=$(mktemp -d "$HOME/Dev/.local/tmp/gecka-geolocation-flags.XXXXXX")
+trap 'rm -rf "$work"' EXIT
+
+(cd "$work" && npm pack "flag-icons@$version" --silent >/dev/null)
+mkdir "$work/package-files"
+tar -xzf "$work"/flag-icons-*.tgz -C "$work/package-files"
+package="$work/package-files/package"
+
+for ratio in 4x3 1x1; do
+    mkdir -p "$target/$ratio"
+    find "$target/$ratio" -name '*.svg' -delete
+
+    for file in "$package/flags/$ratio"/??.svg; do
+        name=$(basename "$file")
+        [ "$name" = xx.svg ] && continue
+        cp "$file" "$target/$ratio/$name"
+    done
+
+    if [ -d "$source/bin/flag-overrides/$ratio" ]; then
+        cp "$source/bin/flag-overrides/$ratio"/*.svg "$target/$ratio/"
+    fi
+done
+
+cp "$package/LICENSE" "$target/LICENSE"
+
+if grep -l -i -E '<script|[[:space:]]on[a-z]+=|href="(https?:|//)' "$target"/*/*.svg; then
+    echo "The files above hold a script, an event handler or an external reference." >&2
+    exit 1
+fi
+
+echo "flag-icons $version: $(find "$target/4x3" -name '*.svg' | wc -l) flags in each shape"

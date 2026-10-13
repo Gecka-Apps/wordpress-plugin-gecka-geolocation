@@ -1,0 +1,2161 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Gecka Geolocation 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wordpress_plugin_gecka_geolocation\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Français\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-13T09:15:19+11:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language: fr_FR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: gecka-geolocation\n"
+
+#. Plugin Name of the plugin
+#: bootstrap.php
+#: inc/core/Admin/SettingsPage.php:139
+#: inc/core/Admin/SiteHealth.php:267
+msgid "Gecka Geolocation"
+msgstr "Gecka Geolocation"
+
+#. Plugin URI of the plugin
+#: bootstrap.php
+msgid "https://github.com/Gecka-Apps/wordpress-plugin-gecka-geolocation"
+msgstr "https://github.com/Gecka-Apps/wordpress-plugin-gecka-geolocation"
+
+#. Description of the plugin
+#: bootstrap.php
+msgid "Downloads the IP geolocation databases of MaxMind (GeoLite or GeoIP®), DB-IP and IPinfo, keeps them up to date, and lets other plugins and WooCommerce locate an IP address on the server."
+msgstr "Télécharge les bases de géolocalisation IP de MaxMind (GeoLite ou GeoIP®), DB-IP et IPinfo, les tient à jour, et permet aux autres extensions et à WooCommerce de localiser une adresse IP sur le serveur."
+
+#. Author of the plugin
+#: bootstrap.php
+msgid "Gecka"
+msgstr "Gecka"
+
+#. Author URI of the plugin
+#: bootstrap.php
+msgid "https://gecka.nc"
+msgstr "https://gecka.nc"
+
+#: inc/core/Admin/DatabasesView.php:66
+msgid "The databases are up to date."
+msgstr "Les bases sont à jour."
+
+#: inc/core/Admin/DatabasesView.php:67
+msgid "Some databases could not be updated: the table tells why. The daily task tries again."
+msgstr "Certaines bases n’ont pas pu être mises à jour : le tableau dit pourquoi. La tâche quotidienne réessaiera."
+
+#: inc/core/Admin/DatabasesView.php:68
+msgid "Another request is updating the databases. Try again in a minute."
+msgstr "Une autre requête met déjà les bases à jour. Réessayez dans une minute."
+
+#. translators: 1: address of the tab of the provider, 2: name of the provider
+#: inc/core/Admin/DatabasesView.php:99
+#, php-format
+msgid "No database is chosen. Choose them in the <a href=\"%1$s\">%2$s</a> tab."
+msgstr "Aucune base n’est choisie. Choisissez-les dans l’onglet <a href=\"%1$s\">%2$s</a>."
+
+#. translators: 1: name of the provider, 2: address of its tab
+#: inc/core/Admin/DatabasesView.php:110
+#, php-format
+msgid "Enter the credentials of your %1$s account in the <a href=\"%2$s\">%1$s</a> tab."
+msgstr "Saisissez les identifiants de votre compte %1$s dans l’onglet <a href=\"%2$s\">%1$s</a>."
+
+#: inc/core/Admin/DatabasesView.php:155
+msgid "Database"
+msgstr "Base"
+
+#: inc/core/Admin/DatabasesView.php:156
+msgid "Content"
+msgstr "Contenu"
+
+#: inc/core/Admin/DatabasesView.php:157
+msgid "Release"
+msgstr "Version"
+
+#: inc/core/Admin/DatabasesView.php:158
+msgid "Size"
+msgstr "Taille"
+
+#: inc/core/Admin/DatabasesView.php:159
+msgid "State"
+msgstr "État"
+
+#. translators: 1: name of a provider, 2: time since, as 3 hours
+#: inc/core/Admin/DatabasesView.php:188
+#, php-format
+msgid "Last checked with %1$s %2$s ago."
+msgstr "Dernière vérification auprès de %1$s il y a %2$s."
+
+#. translators: %s: name of a provider
+#: inc/core/Admin/DatabasesView.php:190
+#, php-format
+msgid "Never checked with %s yet."
+msgstr "Jamais vérifié auprès de %s pour l’instant."
+
+#. translators: %s: date and time
+#: inc/core/Admin/DatabasesView.php:195
+#, php-format
+msgid "Next check: %s."
+msgstr "Prochaine vérification : %s."
+
+#: inc/core/Admin/DatabasesView.php:221
+msgid "Unreadable"
+msgstr "Illisible"
+
+#: inc/core/Admin/DatabasesView.php:222
+msgid "No longer wanted, deleted at the next check"
+msgstr "Plus demandée, supprimée à la prochaine vérification"
+
+#: inc/core/Admin/DatabasesView.php:223
+msgid "Outdated past the licence limit"
+msgstr "Périmée au-delà de la limite de la licence"
+
+#. translators: %s: date
+#: inc/core/Admin/DatabasesView.php:224
+#, php-format
+msgid "Release of %s to download"
+msgstr "Version du %s à télécharger"
+
+#. translators: %s: date
+#: inc/core/Admin/DatabasesView.php:225
+msgid "Up to date"
+msgstr "À jour"
+
+#: inc/core/Admin/DatabasesView.php:226
+msgid "Queued"
+msgstr "En attente"
+
+#: inc/core/Admin/DatabasesView.php:227
+msgid "Not downloaded yet"
+msgstr "Pas encore téléchargée"
+
+#. translators: %s: name of a provider
+#: inc/core/Admin/DatabasesView.php:264
+#, php-format
+msgid "Asking %s for the latest releases…"
+msgstr "Interrogation de %s sur les dernières versions…"
+
+#. translators: 1: name of a database, 2: its rank, 3: number of databases to download
+#: inc/core/Admin/DatabasesView.php:266
+#, php-format
+msgid "Downloading %1$s (%2$s of %3$s)…"
+msgstr "Téléchargement de %1$s (%2$s sur %3$s)…"
+
+#: inc/core/Admin/DatabasesView.php:267
+msgid "Another request is updating the databases, waiting for it…"
+msgstr "Une autre requête met déjà les bases à jour, attente de la fin…"
+
+#: inc/core/Admin/DatabasesView.php:268
+msgid "The update was interrupted. Try again, or let the daily task do it."
+msgstr "La mise à jour a été interrompue. Réessayez, ou laissez la tâche quotidienne s’en charger."
+
+#. translators: %s: name of a provider
+#: inc/core/Admin/DatabasesView.php:289
+#, php-format
+msgid "Update %s now"
+msgstr "Mettre à jour %s maintenant"
+
+#: inc/core/Admin/DatabasesView.php:309
+msgid "Try an address"
+msgstr "Tester une adresse"
+
+#: inc/core/Admin/DatabasesView.php:318
+msgid "IP address"
+msgstr "Adresse IP"
+
+#: inc/core/Admin/DatabasesView.php:321
+#: inc/core/Admin/SettingsPage.php:620
+msgid "Provider"
+msgstr "Fournisseur"
+
+#: inc/core/Admin/DatabasesView.php:328
+msgid "Locate"
+msgstr "Localiser"
+
+#: inc/core/Admin/DatabasesView.php:336
+msgid "This is not an IP address."
+msgstr "Ce n’est pas une adresse IP."
+
+#: inc/core/Admin/DatabasesView.php:345
+msgid "The databases know nothing of this address: a private or reserved one, or one they do not cover."
+msgstr "Les bases ne savent rien de cette adresse : une adresse privée ou réservée, ou qu’elles ne couvrent pas."
+
+#: inc/core/Admin/DatabasesView.php:345
+msgid "This provider has no database installed yet."
+msgstr "Ce fournisseur n’a encore aucune base installée."
+
+#: inc/core/Admin/DatabasesView.php:359
+msgid "Flag emoji"
+msgstr "Drapeau emoji"
+
+#: inc/core/Admin/DatabasesView.php:362
+msgid "SVG flag 4:3"
+msgstr "Drapeau SVG 4:3"
+
+#: inc/core/Admin/DatabasesView.php:362
+msgid "SVG flag 1:1"
+msgstr "Drapeau SVG 1:1"
+
+#: inc/core/Admin/DatabasesView.php:373
+msgid "Network logo"
+msgstr "Logo du réseau"
+
+#: inc/core/Admin/DatabasesView.php:407
+msgid "Country"
+msgstr "Pays"
+
+#: inc/core/Admin/DatabasesView.php:408
+msgid "Continent"
+msgstr "Continent"
+
+#: inc/core/Admin/DatabasesView.php:409
+msgid "European Union"
+msgstr "Union européenne"
+
+#: inc/core/Admin/DatabasesView.php:409
+#: inc/core/Admin/SiteHealth.php:194
+msgid "Yes"
+msgstr "Oui"
+
+#. translators: %d: number of logos
+#: inc/core/Admin/DatabasesView.php:409
+#: inc/core/Admin/SiteHealth.php:194
+#: inc/core/Admin/SiteHealth.php:200
+msgid "No"
+msgstr "Non"
+
+#: inc/core/Admin/DatabasesView.php:410
+msgid "Registered in"
+msgstr "Pays d’enregistrement"
+
+#: inc/core/Admin/DatabasesView.php:411
+msgid "Subdivisions"
+msgstr "Subdivisions"
+
+#: inc/core/Admin/DatabasesView.php:412
+msgid "City"
+msgstr "Ville"
+
+#: inc/core/Admin/DatabasesView.php:413
+msgid "Postal code"
+msgstr "Code postal"
+
+#. translators: 1: latitude, 2: longitude, 3: radius in kilometres
+#: inc/core/Admin/DatabasesView.php:415
+msgid "Coordinates"
+msgstr "Coordonnées"
+
+#. translators: 1: latitude, 2: longitude, 3: radius in kilometres
+#: inc/core/Admin/DatabasesView.php:415
+#, php-format
+msgid "%1$s, %2$s, within %3$d km"
+msgstr "%1$s, %2$s, à %3$d km près"
+
+#: inc/core/Admin/DatabasesView.php:416
+msgid "Time zone"
+msgstr "Fuseau horaire"
+
+#: inc/core/Admin/DatabasesView.php:417
+msgid "Autonomous system"
+msgstr "Système autonome"
+
+#: inc/core/Admin/DatabasesView.php:418
+msgid "ISP"
+msgstr "Fournisseur d’accès"
+
+#: inc/core/Admin/DatabasesView.php:419
+msgid "Organisation"
+msgstr "Organisation"
+
+#: inc/core/Admin/DatabasesView.php:420
+msgid "Connection"
+msgstr "Connexion"
+
+#: inc/core/Admin/DatabasesView.php:421
+msgid "Domain"
+msgstr "Domaine"
+
+#: inc/core/Admin/DatabasesView.php:422
+msgid "Anonymity"
+msgstr "Anonymat"
+
+#: inc/core/Admin/DatabasesView.php:422
+msgid "None known"
+msgstr "Aucun connu"
+
+#: inc/core/Admin/DatabasesView.php:423
+msgid "Network"
+msgstr "Réseau"
+
+#: inc/core/Admin/Notices.php:50
+msgid "See the databases"
+msgstr "Voir les bases"
+
+#. translators: 1: names of databases, 2: number of days, 3: name of the provider
+#: inc/core/Admin/Notices.php:70
+#, php-format
+msgid "Gecka Geolocation could not update %1$s for more than %2$d days after %3$s released a newer one. The licence of %3$s asks that an outdated release be deleted after %2$d days: lookups go on, but the database must be updated or removed."
+msgid_plural "Gecka Geolocation could not update %1$s for more than %2$d days after %3$s released newer ones. The licence of %3$s asks that an outdated release be deleted after %2$d days: lookups go on, but the databases must be updated or removed."
+msgstr[0] "Gecka Geolocation n’a pas pu mettre à jour %1$s plus de %2$d jours après la publication d’une version plus récente par %3$s. La licence de %3$s demande qu’une version périmée soit supprimée au bout de %2$d jours : les recherches continuent, mais la base doit être mise à jour ou retirée."
+msgstr[1] "Gecka Geolocation n’a pas pu mettre à jour %1$s plus de %2$d jours après la publication de versions plus récentes par %3$s. La licence de %3$s demande qu’une version périmée soit supprimée au bout de %2$d jours : les recherches continuent, mais les bases doivent être mises à jour ou retirées."
+
+#: inc/core/Admin/SettingsPage.php:74
+#: inc/core/Admin/SettingsPage.php:635
+#: inc/core/Admin/SiteHealth.php:310
+msgid "Geolocation"
+msgstr "Géolocalisation"
+
+#: inc/core/Admin/SettingsPage.php:78
+msgid "Databases"
+msgstr "Bases de données"
+
+#: inc/core/Admin/SettingsPage.php:106
+#: inc/core/Admin/SettingsPage.php:154
+msgid "Settings"
+msgstr "Réglages"
+
+#: inc/core/Admin/SettingsPage.php:140
+msgid "This site can tell the country, and sometimes the region or the city, of the IP address a visit comes from, with databases from MaxMind, DB-IP or IPinfo kept on its server. No address is sent to them or to anyone else for that, and Gecka Geolocation keeps none. The features of the site using that location decide what they keep of it."
+msgstr "Ce site peut connaître le pays, et parfois la région ou la ville, de l’adresse IP d’où provient une visite, grâce à des bases de MaxMind, DB-IP ou IPinfo conservées sur son serveur. Aucune adresse ne leur est envoyée pour cela, ni à personne d’autre, et Gecka Geolocation n’en conserve aucune. Les fonctionnalités du site qui utilisent cette localisation décident de ce qu’elles en gardent."
+
+#: inc/core/Admin/SettingsPage.php:320
+#: inc/core/Admin/SettingsPage.php:350
+#: inc/core/Admin/SettingsPage.php:727
+msgid "Unknown provider."
+msgstr "Fournisseur inconnu."
+
+#. translators: %s: name of a provider
+#: inc/core/Admin/SettingsPage.php:435
+#: inc/core/Admin/SiteHealth.php:214
+#, php-format
+msgid "%s account"
+msgstr "Compte %s"
+
+#: inc/core/Admin/SettingsPage.php:445
+msgid "Databases to download"
+msgstr "Bases à télécharger"
+
+#: inc/core/Admin/SettingsPage.php:446
+msgid "Each database is checked every day and downloaded again when a new release is out. A database unticked is deleted."
+msgstr "Chaque base est vérifiée tous les jours et téléchargée de nouveau à la sortie d’une nouvelle version. Une base décochée est supprimée."
+
+#: inc/core/Admin/SettingsPage.php:452
+#: inc/core/Admin/SettingsPage.php:453
+msgid "Free"
+msgstr "Gratuites"
+
+#: inc/core/Admin/SettingsPage.php:453
+msgid "Paid"
+msgstr "Payantes"
+
+#: inc/core/Admin/SettingsPage.php:467
+msgid "in your account"
+msgstr "dans votre compte"
+
+#: inc/core/Admin/SettingsPage.php:467
+msgid "not in your account"
+msgstr "hors de votre compte"
+
+#: inc/core/Admin/SettingsPage.php:483
+msgid "Check the account access"
+msgstr "Vérifier l’accès du compte"
+
+#: inc/core/Admin/SettingsPage.php:491
+msgid "Forget the credentials? The databases in place stay, but are no longer updated."
+msgstr "Oublier les identifiants ? Les bases en place restent, mais ne sont plus mises à jour."
+
+#: inc/core/Admin/SettingsPage.php:492
+msgid "Forget the credentials"
+msgstr "Oublier les identifiants"
+
+#. translators: %s: directory on the server
+#: inc/core/Admin/SettingsPage.php:522
+#, php-format
+msgid "The databases are kept in %s."
+msgstr "Les bases sont conservées dans %s."
+
+#. translators: 1: name of a constant, 2: file
+#: inc/core/Admin/SettingsPage.php:556
+#, php-format
+msgid "Defined by %1$s in %2$s."
+msgstr "Définie par %1$s dans %2$s."
+
+#. translators: 1: name of a constant, 2: file
+#: inc/core/Admin/SettingsPage.php:558
+#, php-format
+msgid "Defined by %1$s in %2$s, which holds no valid value."
+msgstr "Définie par %1$s dans %2$s, qui ne contient pas de valeur valide."
+
+#: inc/core/Admin/SettingsPage.php:567
+msgid "Saved. Leave the field empty to keep it."
+msgstr "Enregistré. Laissez le champ vide pour le conserver."
+
+#. translators: %s: names of constants
+#: inc/core/Admin/SettingsPage.php:570
+#, php-format
+msgid "Kept in the database of the site. To keep it out, define %s in wp-config.php."
+msgstr "Conservé dans la base de données du site. Pour l’en sortir, définissez %s dans wp-config.php."
+
+#: inc/core/Admin/SettingsPage.php:589
+msgid "Show"
+msgstr "Afficher"
+
+#: inc/core/Admin/SettingsPage.php:590
+msgid "Hide"
+msgstr "Masquer"
+
+#: inc/core/Admin/SettingsPage.php:613
+#: inc/core/Admin/SettingsPage.php:688
+msgid "Settings saved."
+msgstr "Réglages enregistrés."
+
+#: inc/core/Admin/SettingsPage.php:622
+#: inc/core/Admin/SiteHealth.php:184
+msgid "Default provider"
+msgstr "Fournisseur par défaut"
+
+#: inc/core/Admin/SettingsPage.php:623
+msgid "The first one with databases in place"
+msgstr "Le premier qui a des bases en place"
+
+#: inc/core/Admin/SettingsPage.php:629
+msgid "Answers the plugins and WooCommerce when they name no provider."
+msgstr "Répond aux extensions et à WooCommerce quand elles ne nomment aucun fournisseur."
+
+#: inc/core/Admin/SettingsPage.php:631
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: inc/core/Admin/SettingsPage.php:639
+msgid "Locate the customers of WooCommerce with the default provider"
+msgstr "Localiser les clients de WooCommerce avec le fournisseur par défaut"
+
+#: inc/core/Admin/SettingsPage.php:642
+msgid "WooCommerce then needs no MaxMind licence key of its own: its default customer location set to Geolocate, its taxes and its shipping read the country, the state, the city and the postal code from here. A country a CDN header gives WooCommerce wins."
+msgstr "WooCommerce n’a alors pas besoin de sa propre clé de licence MaxMind : sa localisation du client par défaut réglée sur Géolocaliser, ses taxes et ses expéditions lisent ici le pays, l’état, la ville et le code postal. Un pays qu’un en-tête de CDN donne à WooCommerce l’emporte."
+
+#: inc/core/Admin/SettingsPage.php:643
+msgid "WooCommerce is not active."
+msgstr "WooCommerce n’est pas actif."
+
+#: inc/core/Admin/SettingsPage.php:648
+#: inc/core/Admin/SiteHealth.php:198
+msgid "Logos of the networks"
+msgstr "Logos des réseaux"
+
+#: inc/core/Admin/SettingsPage.php:652
+msgid "Logos"
+msgstr "Logos"
+
+#: inc/core/Admin/SettingsPage.php:655
+msgid "Give the plugins the logo of the network of an address"
+msgstr "Fournir aux extensions le logo du réseau d’une adresse"
+
+#. translators: %s: address of the source of the logos
+#: inc/core/Admin/SettingsPage.php:659
+#, php-format
+msgid "The server downloads each logo once from <a href=\"%s\">asn-data</a>, a mirror of PeeringDB, and serves it from the uploads of the site: browsers never ask the source. Many networks have no logo there. Turning this off deletes the logos downloaded."
+msgstr "Le serveur télécharge chaque logo une seule fois depuis <a href=\"%s\">asn-data</a>, un miroir de PeeringDB, et le sert depuis les téléversements du site : les navigateurs ne contactent jamais la source. Beaucoup de réseaux n’y ont pas de logo. Désactiver ce réglage supprime les logos téléchargés."
+
+#: inc/core/Admin/SettingsPage.php:692
+msgid "The credentials are forgotten."
+msgstr "Les identifiants sont oubliés."
+
+#. translators: %s: name of a provider
+#: inc/core/Admin/SettingsPage.php:705
+#, php-format
+msgid "%s accepted the credentials. The databases they give access to are marked below."
+msgstr "%s a accepté les identifiants. Les bases auxquelles ils donnent accès sont signalées ci-dessous."
+
+#. translators: %s: error
+#: inc/core/Admin/SettingsPage.php:707
+#, php-format
+msgid "The account could not be checked: %s"
+msgstr "Le compte n’a pas pu être vérifié : %s"
+
+#. translators: %s: time
+#: inc/core/Admin/SettingsPage.php:707
+#, php-format
+msgid "It is checked again at %s, and the databases downloaded once the credentials are accepted."
+msgstr "Une nouvelle vérification a lieu à %s, et les bases sont téléchargées dès que les identifiants sont acceptés."
+
+#: inc/core/Admin/SettingsPage.php:746
+msgid "Sorry, you are not allowed to do that."
+msgstr "Désolé, vous n’avez pas l’autorisation de faire cela."
+
+#: inc/core/Admin/SiteHealth.php:57
+msgid "The databases of Gecka Geolocation"
+msgstr "Les bases de Gecka Geolocation"
+
+#: inc/core/Admin/SiteHealth.php:110
+msgid "Gecka Geolocation uses databases outdated past the limit of their licence"
+msgstr "Gecka Geolocation utilise des bases périmées au-delà de la limite de leur licence"
+
+#: inc/core/Admin/SiteHealth.php:115
+msgid "Gecka Geolocation downloads no database"
+msgstr "Gecka Geolocation ne télécharge aucune base"
+
+#: inc/core/Admin/SiteHealth.php:115
+msgid "No provider has its databases chosen and its credentials set: the plugins asking Gecka Geolocation where an address is get no answer."
+msgstr "Aucun fournisseur n’a ses bases choisies et ses identifiants saisis : les extensions qui demandent à Gecka Geolocation où se trouve une adresse n’obtiennent aucune réponse."
+
+#: inc/core/Admin/SiteHealth.php:135
+msgid "Gecka Geolocation has not downloaded all its databases"
+msgstr "Gecka Geolocation n’a pas téléchargé toutes ses bases"
+
+#: inc/core/Admin/SiteHealth.php:148
+msgid "Gecka Geolocation could not update its databases"
+msgstr "Gecka Geolocation n’a pas pu mettre à jour ses bases"
+
+#: inc/core/Admin/SiteHealth.php:148
+msgid "The databases in place keep answering. The daily task tries again."
+msgstr "Les bases en place continuent de répondre. La tâche quotidienne réessaiera."
+
+#: inc/core/Admin/SiteHealth.php:154
+msgid "The daily task of Gecka Geolocation does not run"
+msgstr "La tâche quotidienne de Gecka Geolocation ne s’exécute pas"
+
+#. translators: %s: names of providers
+#: inc/core/Admin/SiteHealth.php:158
+#, php-format
+msgid "The databases of %s were not compared with the latest releases for more than two days. WP-Cron runs the daily task on a visit of the site, or from the cron of the server when DISABLE_WP_CRON is set."
+msgstr "Les bases de %s n’ont pas été comparées aux dernières versions depuis plus de deux jours. WP-Cron lance la tâche quotidienne lors d’une visite du site, ou depuis le cron du serveur quand DISABLE_WP_CRON est défini."
+
+#: inc/core/Admin/SiteHealth.php:165
+msgid "The databases of Gecka Geolocation are up to date"
+msgstr "Les bases de Gecka Geolocation sont à jour"
+
+#: inc/core/Admin/SiteHealth.php:165
+msgid "Each database chosen is in place, and the daily task compares it with the latest release of its provider."
+msgstr "Chaque base choisie est en place, et la tâche quotidienne la compare à la dernière version de son fournisseur."
+
+#: inc/core/Admin/SiteHealth.php:185
+#: inc/core/Admin/SiteHealth.php:215
+#: inc/core/Admin/SiteHealth.php:223
+msgid "None"
+msgstr "Aucun"
+
+#: inc/core/Admin/SiteHealth.php:188
+msgid "Directory"
+msgstr "Dossier"
+
+#: inc/core/Admin/SiteHealth.php:193
+msgid "WooCommerce geolocation"
+msgstr "Géolocalisation WooCommerce"
+
+#. translators: %d: number of logos
+#: inc/core/Admin/SiteHealth.php:200
+#, php-format
+msgid "Yes, %d logo downloaded"
+msgid_plural "Yes, %d logos downloaded"
+msgstr[0] "Oui, %d logo téléchargé"
+msgstr[1] "Oui, %d logos téléchargés"
+
+#: inc/core/Admin/SiteHealth.php:215
+msgid "From wp-config.php"
+msgstr "Depuis wp-config.php"
+
+#: inc/core/Admin/SiteHealth.php:215
+msgid "From the settings"
+msgstr "Depuis les réglages"
+
+#. translators: %s: name of a provider
+#: inc/core/Admin/SiteHealth.php:222
+#, php-format
+msgid "%s databases chosen"
+msgstr "Bases %s choisies"
+
+#. translators: %s: name of a provider
+#: inc/core/Admin/SiteHealth.php:235
+#, php-format
+msgid "%s last check"
+msgstr "Dernière vérification %s"
+
+#: inc/core/Admin/SiteHealth.php:236
+msgid "Never"
+msgstr "Jamais"
+
+#. translators: %s: name of a provider
+#: inc/core/Admin/SiteHealth.php:240
+#, php-format
+msgid "%s next check"
+msgstr "Prochaine vérification %s"
+
+#: inc/core/Admin/SiteHealth.php:241
+msgid "Not scheduled"
+msgstr "Non planifiée"
+
+#. translators: %s: name of a database, or of a provider
+#: inc/core/Admin/SiteHealth.php:259
+#, php-format
+msgid "Error: %s"
+msgstr "Erreur : %s"
+
+#. translators: 1: name of a database or of a provider, 2: error
+#: inc/core/Admin/SiteHealth.php:287
+#, php-format
+msgid "%1$s: %2$s"
+msgstr "%1$s : %2$s"
+
+#: inc/core/Admin/SiteHealth.php:312
+msgid "Open the Geolocation settings"
+msgstr "Ouvrir les réglages de géolocalisation"
+
+#: inc/core/Countries.php:134
+msgctxt "country"
+msgid "Andorra"
+msgstr "Andorre"
+
+#: inc/core/Countries.php:135
+msgctxt "country"
+msgid "United Arab Emirates"
+msgstr "Émirats arabes unis"
+
+#: inc/core/Countries.php:136
+msgctxt "country"
+msgid "Afghanistan"
+msgstr "Afghanistan"
+
+#: inc/core/Countries.php:137
+msgctxt "country"
+msgid "Antigua & Barbuda"
+msgstr "Antigua-et-Barbuda"
+
+#: inc/core/Countries.php:138
+msgctxt "country"
+msgid "Anguilla"
+msgstr "Anguilla"
+
+#: inc/core/Countries.php:139
+msgctxt "country"
+msgid "Albania"
+msgstr "Albanie"
+
+#: inc/core/Countries.php:140
+msgctxt "country"
+msgid "Armenia"
+msgstr "Arménie"
+
+#: inc/core/Countries.php:141
+msgctxt "country"
+msgid "Angola"
+msgstr "Angola"
+
+#: inc/core/Countries.php:142
+msgctxt "country"
+msgid "Antarctica"
+msgstr "Antarctique"
+
+#: inc/core/Countries.php:143
+msgctxt "country"
+msgid "Argentina"
+msgstr "Argentine"
+
+#: inc/core/Countries.php:144
+msgctxt "country"
+msgid "American Samoa"
+msgstr "Samoa américaines"
+
+#: inc/core/Countries.php:145
+msgctxt "country"
+msgid "Austria"
+msgstr "Autriche"
+
+#: inc/core/Countries.php:146
+msgctxt "country"
+msgid "Australia"
+msgstr "Australie"
+
+#: inc/core/Countries.php:147
+msgctxt "country"
+msgid "Aruba"
+msgstr "Aruba"
+
+#: inc/core/Countries.php:148
+msgctxt "country"
+msgid "Åland Islands"
+msgstr "Îles Åland"
+
+#: inc/core/Countries.php:149
+msgctxt "country"
+msgid "Azerbaijan"
+msgstr "Azerbaïdjan"
+
+#: inc/core/Countries.php:150
+msgctxt "country"
+msgid "Bosnia & Herzegovina"
+msgstr "Bosnie-Herzégovine"
+
+#: inc/core/Countries.php:151
+msgctxt "country"
+msgid "Barbados"
+msgstr "Barbade"
+
+#: inc/core/Countries.php:152
+msgctxt "country"
+msgid "Bangladesh"
+msgstr "Bangladesh"
+
+#: inc/core/Countries.php:153
+msgctxt "country"
+msgid "Belgium"
+msgstr "Belgique"
+
+#: inc/core/Countries.php:154
+msgctxt "country"
+msgid "Burkina Faso"
+msgstr "Burkina Faso"
+
+#: inc/core/Countries.php:155
+msgctxt "country"
+msgid "Bulgaria"
+msgstr "Bulgarie"
+
+#: inc/core/Countries.php:156
+msgctxt "country"
+msgid "Bahrain"
+msgstr "Bahreïn"
+
+#: inc/core/Countries.php:157
+msgctxt "country"
+msgid "Burundi"
+msgstr "Burundi"
+
+#: inc/core/Countries.php:158
+msgctxt "country"
+msgid "Benin"
+msgstr "Bénin"
+
+#: inc/core/Countries.php:159
+msgctxt "country"
+msgid "St. Barthélemy"
+msgstr "Saint-Barthélemy"
+
+#: inc/core/Countries.php:160
+msgctxt "country"
+msgid "Bermuda"
+msgstr "Bermudes"
+
+#: inc/core/Countries.php:161
+msgctxt "country"
+msgid "Brunei"
+msgstr "Brunei"
+
+#: inc/core/Countries.php:162
+msgctxt "country"
+msgid "Bolivia"
+msgstr "Bolivie"
+
+#: inc/core/Countries.php:163
+msgctxt "country"
+msgid "Caribbean Netherlands"
+msgstr "Pays-Bas caribéens"
+
+#: inc/core/Countries.php:164
+msgctxt "country"
+msgid "Brazil"
+msgstr "Brésil"
+
+#: inc/core/Countries.php:165
+msgctxt "country"
+msgid "Bahamas"
+msgstr "Bahamas"
+
+#: inc/core/Countries.php:166
+msgctxt "country"
+msgid "Bhutan"
+msgstr "Bhoutan"
+
+#: inc/core/Countries.php:167
+msgctxt "country"
+msgid "Bouvet Island"
+msgstr "Île Bouvet"
+
+#: inc/core/Countries.php:168
+msgctxt "country"
+msgid "Botswana"
+msgstr "Botswana"
+
+#: inc/core/Countries.php:169
+msgctxt "country"
+msgid "Belarus"
+msgstr "Biélorussie"
+
+#: inc/core/Countries.php:170
+msgctxt "country"
+msgid "Belize"
+msgstr "Belize"
+
+#: inc/core/Countries.php:171
+msgctxt "country"
+msgid "Canada"
+msgstr "Canada"
+
+#: inc/core/Countries.php:172
+msgctxt "country"
+msgid "Cocos (Keeling) Islands"
+msgstr "Îles Cocos"
+
+#: inc/core/Countries.php:173
+msgctxt "country"
+msgid "Congo - Kinshasa"
+msgstr "Congo-Kinshasa"
+
+#: inc/core/Countries.php:174
+msgctxt "country"
+msgid "Central African Republic"
+msgstr "République centrafricaine"
+
+#: inc/core/Countries.php:175
+msgctxt "country"
+msgid "Congo - Brazzaville"
+msgstr "Congo-Brazzaville"
+
+#: inc/core/Countries.php:176
+msgctxt "country"
+msgid "Switzerland"
+msgstr "Suisse"
+
+#: inc/core/Countries.php:177
+msgctxt "country"
+msgid "Côte d’Ivoire"
+msgstr "Côte d’Ivoire"
+
+#: inc/core/Countries.php:178
+msgctxt "country"
+msgid "Cook Islands"
+msgstr "Îles Cook"
+
+#: inc/core/Countries.php:179
+msgctxt "country"
+msgid "Chile"
+msgstr "Chili"
+
+#: inc/core/Countries.php:180
+msgctxt "country"
+msgid "Cameroon"
+msgstr "Cameroun"
+
+#: inc/core/Countries.php:181
+msgctxt "country"
+msgid "China"
+msgstr "Chine"
+
+#: inc/core/Countries.php:182
+msgctxt "country"
+msgid "Colombia"
+msgstr "Colombie"
+
+#: inc/core/Countries.php:183
+msgctxt "country"
+msgid "Clipperton Island"
+msgstr "Île Clipperton"
+
+#: inc/core/Countries.php:184
+msgctxt "country"
+msgid "Costa Rica"
+msgstr "Costa Rica"
+
+#: inc/core/Countries.php:185
+msgctxt "country"
+msgid "Cuba"
+msgstr "Cuba"
+
+#: inc/core/Countries.php:186
+msgctxt "country"
+msgid "Cape Verde"
+msgstr "Cap-Vert"
+
+#: inc/core/Countries.php:187
+msgctxt "country"
+msgid "Curaçao"
+msgstr "Curaçao"
+
+#: inc/core/Countries.php:188
+msgctxt "country"
+msgid "Christmas Island"
+msgstr "Île Christmas"
+
+#: inc/core/Countries.php:189
+msgctxt "country"
+msgid "Cyprus"
+msgstr "Chypre"
+
+#: inc/core/Countries.php:190
+msgctxt "country"
+msgid "Czechia"
+msgstr "Tchéquie"
+
+#: inc/core/Countries.php:191
+msgctxt "country"
+msgid "Germany"
+msgstr "Allemagne"
+
+#: inc/core/Countries.php:192
+msgctxt "country"
+msgid "Diego Garcia"
+msgstr "Diego Garcia"
+
+#: inc/core/Countries.php:193
+msgctxt "country"
+msgid "Djibouti"
+msgstr "Djibouti"
+
+#: inc/core/Countries.php:194
+msgctxt "country"
+msgid "Denmark"
+msgstr "Danemark"
+
+#: inc/core/Countries.php:195
+msgctxt "country"
+msgid "Dominica"
+msgstr "Dominique"
+
+#: inc/core/Countries.php:196
+msgctxt "country"
+msgid "Dominican Republic"
+msgstr "République dominicaine"
+
+#: inc/core/Countries.php:197
+msgctxt "country"
+msgid "Algeria"
+msgstr "Algérie"
+
+#: inc/core/Countries.php:198
+msgctxt "country"
+msgid "Ecuador"
+msgstr "Équateur"
+
+#: inc/core/Countries.php:199
+msgctxt "country"
+msgid "Estonia"
+msgstr "Estonie"
+
+#: inc/core/Countries.php:200
+msgctxt "country"
+msgid "Egypt"
+msgstr "Égypte"
+
+#: inc/core/Countries.php:201
+msgctxt "country"
+msgid "Western Sahara"
+msgstr "Sahara occidental"
+
+#: inc/core/Countries.php:202
+msgctxt "country"
+msgid "Eritrea"
+msgstr "Érythrée"
+
+#: inc/core/Countries.php:203
+msgctxt "country"
+msgid "Spain"
+msgstr "Espagne"
+
+#: inc/core/Countries.php:204
+msgctxt "country"
+msgid "Ethiopia"
+msgstr "Éthiopie"
+
+#: inc/core/Countries.php:205
+msgctxt "country"
+msgid "European Union"
+msgstr "Union européenne"
+
+#: inc/core/Countries.php:206
+msgctxt "country"
+msgid "Finland"
+msgstr "Finlande"
+
+#: inc/core/Countries.php:207
+msgctxt "country"
+msgid "Fiji"
+msgstr "Fidji"
+
+#: inc/core/Countries.php:208
+msgctxt "country"
+msgid "Falkland Islands"
+msgstr "Îles Malouines"
+
+#: inc/core/Countries.php:209
+msgctxt "country"
+msgid "Micronesia"
+msgstr "Micronésie"
+
+#: inc/core/Countries.php:210
+msgctxt "country"
+msgid "Faroe Islands"
+msgstr "Îles Féroé"
+
+#: inc/core/Countries.php:211
+msgctxt "country"
+msgid "France"
+msgstr "France"
+
+#: inc/core/Countries.php:212
+msgctxt "country"
+msgid "Gabon"
+msgstr "Gabon"
+
+#: inc/core/Countries.php:213
+msgctxt "country"
+msgid "United Kingdom"
+msgstr "Royaume-Uni"
+
+#: inc/core/Countries.php:214
+msgctxt "country"
+msgid "Grenada"
+msgstr "Grenade"
+
+#: inc/core/Countries.php:215
+msgctxt "country"
+msgid "Georgia"
+msgstr "Géorgie"
+
+#: inc/core/Countries.php:216
+msgctxt "country"
+msgid "French Guiana"
+msgstr "Guyane française"
+
+#: inc/core/Countries.php:217
+msgctxt "country"
+msgid "Guernsey"
+msgstr "Guernesey"
+
+#: inc/core/Countries.php:218
+msgctxt "country"
+msgid "Ghana"
+msgstr "Ghana"
+
+#: inc/core/Countries.php:219
+msgctxt "country"
+msgid "Gibraltar"
+msgstr "Gibraltar"
+
+#: inc/core/Countries.php:220
+msgctxt "country"
+msgid "Greenland"
+msgstr "Groenland"
+
+#: inc/core/Countries.php:221
+msgctxt "country"
+msgid "Gambia"
+msgstr "Gambie"
+
+#: inc/core/Countries.php:222
+msgctxt "country"
+msgid "Guinea"
+msgstr "Guinée"
+
+#: inc/core/Countries.php:223
+msgctxt "country"
+msgid "Guadeloupe"
+msgstr "Guadeloupe"
+
+#: inc/core/Countries.php:224
+msgctxt "country"
+msgid "Equatorial Guinea"
+msgstr "Guinée équatoriale"
+
+#: inc/core/Countries.php:225
+msgctxt "country"
+msgid "Greece"
+msgstr "Grèce"
+
+#: inc/core/Countries.php:226
+msgctxt "country"
+msgid "South Georgia & South Sandwich Islands"
+msgstr "Géorgie du Sud-et-les Îles Sandwich du Sud"
+
+#: inc/core/Countries.php:227
+msgctxt "country"
+msgid "Guatemala"
+msgstr "Guatemala"
+
+#: inc/core/Countries.php:228
+msgctxt "country"
+msgid "Guam"
+msgstr "Guam"
+
+#: inc/core/Countries.php:229
+msgctxt "country"
+msgid "Guinea-Bissau"
+msgstr "Guinée-Bissau"
+
+#: inc/core/Countries.php:230
+msgctxt "country"
+msgid "Guyana"
+msgstr "Guyana"
+
+#: inc/core/Countries.php:231
+msgctxt "country"
+msgid "Hong Kong SAR China"
+msgstr "R.A.S. chinoise de Hong Kong"
+
+#: inc/core/Countries.php:232
+msgctxt "country"
+msgid "Heard & McDonald Islands"
+msgstr "Îles Heard-et-MacDonald"
+
+#: inc/core/Countries.php:233
+msgctxt "country"
+msgid "Honduras"
+msgstr "Honduras"
+
+#: inc/core/Countries.php:234
+msgctxt "country"
+msgid "Croatia"
+msgstr "Croatie"
+
+#: inc/core/Countries.php:235
+msgctxt "country"
+msgid "Haiti"
+msgstr "Haïti"
+
+#: inc/core/Countries.php:236
+msgctxt "country"
+msgid "Hungary"
+msgstr "Hongrie"
+
+#: inc/core/Countries.php:237
+msgctxt "country"
+msgid "Canary Islands"
+msgstr "Îles Canaries"
+
+#: inc/core/Countries.php:238
+msgctxt "country"
+msgid "Indonesia"
+msgstr "Indonésie"
+
+#: inc/core/Countries.php:239
+msgctxt "country"
+msgid "Ireland"
+msgstr "Irlande"
+
+#: inc/core/Countries.php:240
+msgctxt "country"
+msgid "Israel"
+msgstr "Israël"
+
+#: inc/core/Countries.php:241
+msgctxt "country"
+msgid "Isle of Man"
+msgstr "Île de Man"
+
+#: inc/core/Countries.php:242
+msgctxt "country"
+msgid "India"
+msgstr "Inde"
+
+#: inc/core/Countries.php:243
+msgctxt "country"
+msgid "British Indian Ocean Territory"
+msgstr "Territoire britannique de l’océan Indien"
+
+#: inc/core/Countries.php:244
+msgctxt "country"
+msgid "Iraq"
+msgstr "Irak"
+
+#: inc/core/Countries.php:245
+msgctxt "country"
+msgid "Iran"
+msgstr "Iran"
+
+#: inc/core/Countries.php:246
+msgctxt "country"
+msgid "Iceland"
+msgstr "Islande"
+
+#: inc/core/Countries.php:247
+msgctxt "country"
+msgid "Italy"
+msgstr "Italie"
+
+#: inc/core/Countries.php:248
+msgctxt "country"
+msgid "Jersey"
+msgstr "Jersey"
+
+#: inc/core/Countries.php:249
+msgctxt "country"
+msgid "Jamaica"
+msgstr "Jamaïque"
+
+#: inc/core/Countries.php:250
+msgctxt "country"
+msgid "Jordan"
+msgstr "Jordanie"
+
+#: inc/core/Countries.php:251
+msgctxt "country"
+msgid "Japan"
+msgstr "Japon"
+
+#: inc/core/Countries.php:252
+msgctxt "country"
+msgid "Kenya"
+msgstr "Kenya"
+
+#: inc/core/Countries.php:253
+msgctxt "country"
+msgid "Kyrgyzstan"
+msgstr "Kirghizstan"
+
+#: inc/core/Countries.php:254
+msgctxt "country"
+msgid "Cambodia"
+msgstr "Cambodge"
+
+#: inc/core/Countries.php:255
+msgctxt "country"
+msgid "Kiribati"
+msgstr "Kiribati"
+
+#: inc/core/Countries.php:256
+msgctxt "country"
+msgid "Comoros"
+msgstr "Comores"
+
+#: inc/core/Countries.php:257
+msgctxt "country"
+msgid "St. Kitts & Nevis"
+msgstr "Saint-Christophe-et-Niévès"
+
+#: inc/core/Countries.php:258
+msgctxt "country"
+msgid "North Korea"
+msgstr "Corée du Nord"
+
+#: inc/core/Countries.php:259
+msgctxt "country"
+msgid "South Korea"
+msgstr "Corée du Sud"
+
+#: inc/core/Countries.php:260
+msgctxt "country"
+msgid "Kuwait"
+msgstr "Koweït"
+
+#: inc/core/Countries.php:261
+msgctxt "country"
+msgid "Cayman Islands"
+msgstr "Îles Caïmans"
+
+#: inc/core/Countries.php:262
+msgctxt "country"
+msgid "Kazakhstan"
+msgstr "Kazakhstan"
+
+#: inc/core/Countries.php:263
+msgctxt "country"
+msgid "Laos"
+msgstr "Laos"
+
+#: inc/core/Countries.php:264
+msgctxt "country"
+msgid "Lebanon"
+msgstr "Liban"
+
+#: inc/core/Countries.php:265
+msgctxt "country"
+msgid "St. Lucia"
+msgstr "Sainte-Lucie"
+
+#: inc/core/Countries.php:266
+msgctxt "country"
+msgid "Liechtenstein"
+msgstr "Liechtenstein"
+
+#: inc/core/Countries.php:267
+msgctxt "country"
+msgid "Sri Lanka"
+msgstr "Sri Lanka"
+
+#: inc/core/Countries.php:268
+msgctxt "country"
+msgid "Liberia"
+msgstr "Liberia"
+
+#: inc/core/Countries.php:269
+msgctxt "country"
+msgid "Lesotho"
+msgstr "Lesotho"
+
+#: inc/core/Countries.php:270
+msgctxt "country"
+msgid "Lithuania"
+msgstr "Lituanie"
+
+#: inc/core/Countries.php:271
+msgctxt "country"
+msgid "Luxembourg"
+msgstr "Luxembourg"
+
+#: inc/core/Countries.php:272
+msgctxt "country"
+msgid "Latvia"
+msgstr "Lettonie"
+
+#: inc/core/Countries.php:273
+msgctxt "country"
+msgid "Libya"
+msgstr "Libye"
+
+#: inc/core/Countries.php:274
+msgctxt "country"
+msgid "Morocco"
+msgstr "Maroc"
+
+#: inc/core/Countries.php:275
+msgctxt "country"
+msgid "Monaco"
+msgstr "Monaco"
+
+#: inc/core/Countries.php:276
+msgctxt "country"
+msgid "Moldova"
+msgstr "Moldavie"
+
+#: inc/core/Countries.php:277
+msgctxt "country"
+msgid "Montenegro"
+msgstr "Monténégro"
+
+#: inc/core/Countries.php:278
+msgctxt "country"
+msgid "St. Martin"
+msgstr "Saint-Martin"
+
+#: inc/core/Countries.php:279
+msgctxt "country"
+msgid "Madagascar"
+msgstr "Madagascar"
+
+#: inc/core/Countries.php:280
+msgctxt "country"
+msgid "Marshall Islands"
+msgstr "Îles Marshall"
+
+#: inc/core/Countries.php:281
+msgctxt "country"
+msgid "North Macedonia"
+msgstr "Macédoine du Nord"
+
+#: inc/core/Countries.php:282
+msgctxt "country"
+msgid "Mali"
+msgstr "Mali"
+
+#: inc/core/Countries.php:283
+msgctxt "country"
+msgid "Myanmar (Burma)"
+msgstr "Myanmar (Birmanie)"
+
+#: inc/core/Countries.php:284
+msgctxt "country"
+msgid "Mongolia"
+msgstr "Mongolie"
+
+#: inc/core/Countries.php:285
+msgctxt "country"
+msgid "Macao SAR China"
+msgstr "R.A.S. chinoise de Macao"
+
+#: inc/core/Countries.php:286
+msgctxt "country"
+msgid "Northern Mariana Islands"
+msgstr "Îles Mariannes du Nord"
+
+#: inc/core/Countries.php:287
+msgctxt "country"
+msgid "Martinique"
+msgstr "Martinique"
+
+#: inc/core/Countries.php:288
+msgctxt "country"
+msgid "Mauritania"
+msgstr "Mauritanie"
+
+#: inc/core/Countries.php:289
+msgctxt "country"
+msgid "Montserrat"
+msgstr "Montserrat"
+
+#: inc/core/Countries.php:290
+msgctxt "country"
+msgid "Malta"
+msgstr "Malte"
+
+#: inc/core/Countries.php:291
+msgctxt "country"
+msgid "Mauritius"
+msgstr "Maurice"
+
+#: inc/core/Countries.php:292
+msgctxt "country"
+msgid "Maldives"
+msgstr "Maldives"
+
+#: inc/core/Countries.php:293
+msgctxt "country"
+msgid "Malawi"
+msgstr "Malawi"
+
+#: inc/core/Countries.php:294
+msgctxt "country"
+msgid "Mexico"
+msgstr "Mexique"
+
+#: inc/core/Countries.php:295
+msgctxt "country"
+msgid "Malaysia"
+msgstr "Malaisie"
+
+#: inc/core/Countries.php:296
+msgctxt "country"
+msgid "Mozambique"
+msgstr "Mozambique"
+
+#: inc/core/Countries.php:297
+msgctxt "country"
+msgid "Namibia"
+msgstr "Namibie"
+
+#: inc/core/Countries.php:298
+msgctxt "country"
+msgid "New Caledonia"
+msgstr "Nouvelle-Calédonie"
+
+#: inc/core/Countries.php:299
+msgctxt "country"
+msgid "Niger"
+msgstr "Niger"
+
+#: inc/core/Countries.php:300
+msgctxt "country"
+msgid "Norfolk Island"
+msgstr "Île Norfolk"
+
+#: inc/core/Countries.php:301
+msgctxt "country"
+msgid "Nigeria"
+msgstr "Nigeria"
+
+#: inc/core/Countries.php:302
+msgctxt "country"
+msgid "Nicaragua"
+msgstr "Nicaragua"
+
+#: inc/core/Countries.php:303
+msgctxt "country"
+msgid "Netherlands"
+msgstr "Pays-Bas"
+
+#: inc/core/Countries.php:304
+msgctxt "country"
+msgid "Norway"
+msgstr "Norvège"
+
+#: inc/core/Countries.php:305
+msgctxt "country"
+msgid "Nepal"
+msgstr "Népal"
+
+#: inc/core/Countries.php:306
+msgctxt "country"
+msgid "Nauru"
+msgstr "Nauru"
+
+#: inc/core/Countries.php:307
+msgctxt "country"
+msgid "Niue"
+msgstr "Niue"
+
+#: inc/core/Countries.php:308
+msgctxt "country"
+msgid "New Zealand"
+msgstr "Nouvelle-Zélande"
+
+#: inc/core/Countries.php:309
+msgctxt "country"
+msgid "Oman"
+msgstr "Oman"
+
+#: inc/core/Countries.php:310
+msgctxt "country"
+msgid "Panama"
+msgstr "Panama"
+
+#: inc/core/Countries.php:311
+msgctxt "country"
+msgid "Pacific Community"
+msgstr "Communauté du Pacifique"
+
+#: inc/core/Countries.php:312
+msgctxt "country"
+msgid "Peru"
+msgstr "Pérou"
+
+#: inc/core/Countries.php:313
+msgctxt "country"
+msgid "French Polynesia"
+msgstr "Polynésie française"
+
+#: inc/core/Countries.php:314
+msgctxt "country"
+msgid "Papua New Guinea"
+msgstr "Papouasie-Nouvelle-Guinée"
+
+#: inc/core/Countries.php:315
+msgctxt "country"
+msgid "Philippines"
+msgstr "Philippines"
+
+#: inc/core/Countries.php:316
+msgctxt "country"
+msgid "Pakistan"
+msgstr "Pakistan"
+
+#: inc/core/Countries.php:317
+msgctxt "country"
+msgid "Poland"
+msgstr "Pologne"
+
+#: inc/core/Countries.php:318
+msgctxt "country"
+msgid "St. Pierre & Miquelon"
+msgstr "Saint-Pierre-et-Miquelon"
+
+#: inc/core/Countries.php:319
+msgctxt "country"
+msgid "Pitcairn Islands"
+msgstr "Îles Pitcairn"
+
+#: inc/core/Countries.php:320
+msgctxt "country"
+msgid "Puerto Rico"
+msgstr "Porto Rico"
+
+#: inc/core/Countries.php:321
+msgctxt "country"
+msgid "Palestinian Territories"
+msgstr "Territoires palestiniens"
+
+#: inc/core/Countries.php:322
+msgctxt "country"
+msgid "Portugal"
+msgstr "Portugal"
+
+#: inc/core/Countries.php:323
+msgctxt "country"
+msgid "Palau"
+msgstr "Palaos"
+
+#: inc/core/Countries.php:324
+msgctxt "country"
+msgid "Paraguay"
+msgstr "Paraguay"
+
+#: inc/core/Countries.php:325
+msgctxt "country"
+msgid "Qatar"
+msgstr "Qatar"
+
+#: inc/core/Countries.php:326
+msgctxt "country"
+msgid "Réunion"
+msgstr "La Réunion"
+
+#: inc/core/Countries.php:327
+msgctxt "country"
+msgid "Romania"
+msgstr "Roumanie"
+
+#: inc/core/Countries.php:328
+msgctxt "country"
+msgid "Serbia"
+msgstr "Serbie"
+
+#: inc/core/Countries.php:329
+msgctxt "country"
+msgid "Russia"
+msgstr "Russie"
+
+#: inc/core/Countries.php:330
+msgctxt "country"
+msgid "Rwanda"
+msgstr "Rwanda"
+
+#: inc/core/Countries.php:331
+msgctxt "country"
+msgid "Saudi Arabia"
+msgstr "Arabie saoudite"
+
+#: inc/core/Countries.php:332
+msgctxt "country"
+msgid "Solomon Islands"
+msgstr "Îles Salomon"
+
+#: inc/core/Countries.php:333
+msgctxt "country"
+msgid "Seychelles"
+msgstr "Seychelles"
+
+#: inc/core/Countries.php:334
+msgctxt "country"
+msgid "Sudan"
+msgstr "Soudan"
+
+#: inc/core/Countries.php:335
+msgctxt "country"
+msgid "Sweden"
+msgstr "Suède"
+
+#: inc/core/Countries.php:336
+msgctxt "country"
+msgid "Singapore"
+msgstr "Singapour"
+
+#: inc/core/Countries.php:337
+msgctxt "country"
+msgid "St. Helena"
+msgstr "Sainte-Hélène"
+
+#: inc/core/Countries.php:338
+msgctxt "country"
+msgid "Slovenia"
+msgstr "Slovénie"
+
+#: inc/core/Countries.php:339
+msgctxt "country"
+msgid "Svalbard & Jan Mayen"
+msgstr "Svalbard et Jan Mayen"
+
+#: inc/core/Countries.php:340
+msgctxt "country"
+msgid "Slovakia"
+msgstr "Slovaquie"
+
+#: inc/core/Countries.php:341
+msgctxt "country"
+msgid "Sierra Leone"
+msgstr "Sierra Leone"
+
+#: inc/core/Countries.php:342
+msgctxt "country"
+msgid "San Marino"
+msgstr "Saint-Marin"
+
+#: inc/core/Countries.php:343
+msgctxt "country"
+msgid "Senegal"
+msgstr "Sénégal"
+
+#: inc/core/Countries.php:344
+msgctxt "country"
+msgid "Somalia"
+msgstr "Somalie"
+
+#: inc/core/Countries.php:345
+msgctxt "country"
+msgid "Suriname"
+msgstr "Suriname"
+
+#: inc/core/Countries.php:346
+msgctxt "country"
+msgid "South Sudan"
+msgstr "Soudan du Sud"
+
+#: inc/core/Countries.php:347
+msgctxt "country"
+msgid "São Tomé & Príncipe"
+msgstr "Sao Tomé-et-Principe"
+
+#: inc/core/Countries.php:348
+msgctxt "country"
+msgid "El Salvador"
+msgstr "Salvador"
+
+#: inc/core/Countries.php:349
+msgctxt "country"
+msgid "Sint Maarten"
+msgstr "Saint-Martin (partie néerlandaise)"
+
+#: inc/core/Countries.php:350
+msgctxt "country"
+msgid "Syria"
+msgstr "Syrie"
+
+#: inc/core/Countries.php:351
+msgctxt "country"
+msgid "Eswatini"
+msgstr "Eswatini"
+
+#: inc/core/Countries.php:352
+msgctxt "country"
+msgid "Turks & Caicos Islands"
+msgstr "Îles Turques-et-Caïques"
+
+#: inc/core/Countries.php:353
+msgctxt "country"
+msgid "Chad"
+msgstr "Tchad"
+
+#: inc/core/Countries.php:354
+msgctxt "country"
+msgid "French Southern Territories"
+msgstr "Terres australes françaises"
+
+#: inc/core/Countries.php:355
+msgctxt "country"
+msgid "Togo"
+msgstr "Togo"
+
+#: inc/core/Countries.php:356
+msgctxt "country"
+msgid "Thailand"
+msgstr "Thaïlande"
+
+#: inc/core/Countries.php:357
+msgctxt "country"
+msgid "Tajikistan"
+msgstr "Tadjikistan"
+
+#: inc/core/Countries.php:358
+msgctxt "country"
+msgid "Tokelau"
+msgstr "Tokelau"
+
+#: inc/core/Countries.php:359
+msgctxt "country"
+msgid "Timor-Leste"
+msgstr "Timor oriental"
+
+#: inc/core/Countries.php:360
+msgctxt "country"
+msgid "Turkmenistan"
+msgstr "Turkménistan"
+
+#: inc/core/Countries.php:361
+msgctxt "country"
+msgid "Tunisia"
+msgstr "Tunisie"
+
+#: inc/core/Countries.php:362
+msgctxt "country"
+msgid "Tonga"
+msgstr "Tonga"
+
+#: inc/core/Countries.php:363
+msgctxt "country"
+msgid "Türkiye"
+msgstr "Turquie"
+
+#: inc/core/Countries.php:364
+msgctxt "country"
+msgid "Trinidad & Tobago"
+msgstr "Trinité-et-Tobago"
+
+#: inc/core/Countries.php:365
+msgctxt "country"
+msgid "Tuvalu"
+msgstr "Tuvalu"
+
+#: inc/core/Countries.php:366
+msgctxt "country"
+msgid "Taiwan"
+msgstr "Taïwan"
+
+#: inc/core/Countries.php:367
+msgctxt "country"
+msgid "Tanzania"
+msgstr "Tanzanie"
+
+#: inc/core/Countries.php:368
+msgctxt "country"
+msgid "Ukraine"
+msgstr "Ukraine"
+
+#: inc/core/Countries.php:369
+msgctxt "country"
+msgid "Uganda"
+msgstr "Ouganda"
+
+#: inc/core/Countries.php:370
+msgctxt "country"
+msgid "U.S. Outlying Islands"
+msgstr "Îles mineures éloignées des États-Unis"
+
+#: inc/core/Countries.php:371
+msgctxt "country"
+msgid "United Nations"
+msgstr "Nations Unies"
+
+#: inc/core/Countries.php:372
+msgctxt "country"
+msgid "United States"
+msgstr "États-Unis"
+
+#: inc/core/Countries.php:373
+msgctxt "country"
+msgid "Uruguay"
+msgstr "Uruguay"
+
+#: inc/core/Countries.php:374
+msgctxt "country"
+msgid "Uzbekistan"
+msgstr "Ouzbékistan"
+
+#: inc/core/Countries.php:375
+msgctxt "country"
+msgid "Vatican City"
+msgstr "État de la Cité du Vatican"
+
+#: inc/core/Countries.php:376
+msgctxt "country"
+msgid "St. Vincent & Grenadines"
+msgstr "Saint-Vincent-et-les Grenadines"
+
+#: inc/core/Countries.php:377
+msgctxt "country"
+msgid "Venezuela"
+msgstr "Venezuela"
+
+#: inc/core/Countries.php:378
+msgctxt "country"
+msgid "British Virgin Islands"
+msgstr "Îles Vierges britanniques"
+
+#: inc/core/Countries.php:379
+msgctxt "country"
+msgid "U.S. Virgin Islands"
+msgstr "Îles Vierges des États-Unis"
+
+#: inc/core/Countries.php:380
+msgctxt "country"
+msgid "Vietnam"
+msgstr "Viêt Nam"
+
+#: inc/core/Countries.php:381
+msgctxt "country"
+msgid "Vanuatu"
+msgstr "Vanuatu"
+
+#: inc/core/Countries.php:382
+msgctxt "country"
+msgid "Wallis & Futuna"
+msgstr "Wallis-et-Futuna"
+
+#: inc/core/Countries.php:383
+msgctxt "country"
+msgid "Samoa"
+msgstr "Samoa"
+
+#: inc/core/Countries.php:384
+msgctxt "country"
+msgid "Kosovo"
+msgstr "Kosovo"
+
+#: inc/core/Countries.php:385
+msgctxt "country"
+msgid "Yemen"
+msgstr "Yémen"
+
+#: inc/core/Countries.php:386
+msgctxt "country"
+msgid "Mayotte"
+msgstr "Mayotte"
+
+#: inc/core/Countries.php:387
+msgctxt "country"
+msgid "South Africa"
+msgstr "Afrique du Sud"
+
+#: inc/core/Countries.php:388
+msgctxt "country"
+msgid "Zambia"
+msgstr "Zambie"
+
+#: inc/core/Countries.php:389
+msgctxt "country"
+msgid "Zimbabwe"
+msgstr "Zimbabwe"
+
+#: inc/core/DbIp/Provider.php:163
+msgid "DB-IP refuses the downloads of this server for now. The download is tried again later."
+msgstr "DB-IP refuse pour l’instant les téléchargements de ce serveur. Le téléchargement sera retenté plus tard."
+
+#. translators: 1: address of the page of the databases, 2: address of the licence
+#: inc/core/DbIp/Provider.php:185
+#, php-format
+msgid "The <a href=\"%1$s\">Lite databases of DB-IP</a> need no account and come out at the start of each month. Their licence, <a href=\"%2$s\">Creative Commons Attribution 4.0</a>, asks for a link to DB-IP on the pages that show or use their results: the plugins using them get its wording from Gecka Geolocation. Nothing is downloaded until a database is ticked."
+msgstr "Les <a href=\"%1$s\">bases Lite de DB-IP</a> ne demandent aucun compte et sortent au début de chaque mois. Leur licence, <a href=\"%2$s\">Creative Commons Attribution 4.0</a>, demande un lien vers DB-IP sur les pages qui affichent ou utilisent leurs résultats : les extensions qui les utilisent en obtiennent le libellé auprès de Gecka Geolocation. Rien n’est téléchargé tant qu’aucune base n’est cochée."
+
+#: inc/core/IPinfo/Provider.php:108
+msgid "Access token"
+msgstr "Jeton d’accès"
+
+#: inc/core/IPinfo/Provider.php:111
+msgid "An access token holds letters, digits, dashes and underscores only. It was not saved."
+msgstr "Un jeton d’accès ne contient que des lettres, des chiffres, des tirets et des soulignés. Il n’a pas été enregistré."
+
+#. translators: 1: address of the page of IPinfo Lite, 2: address of the page of the token, 3: address of the licence
+#: inc/core/IPinfo/Provider.php:253
+#, php-format
+msgid "<a href=\"%1$s\">IPinfo Lite</a> gives the country and the autonomous system of an address, updated every day. It downloads with the access token of a free IPinfo account, shown on its <a href=\"%2$s\">token page</a>. Its licence, <a href=\"%3$s\">Creative Commons Attribution-ShareAlike 4.0</a>, asks for a link to IPinfo where its data is used: the plugins using it get its wording from Gecka Geolocation."
+msgstr "<a href=\"%1$s\">IPinfo Lite</a> donne le pays et le système autonome d’une adresse, mis à jour tous les jours. Il se télécharge avec le jeton d’accès d’un compte IPinfo gratuit, affiché sur sa <a href=\"%2$s\">page du jeton</a>. Sa licence, <a href=\"%3$s\">Creative Commons Attribution-ShareAlike 4.0</a>, demande un lien vers IPinfo là où ses données sont utilisées : les extensions qui l’utilisent en obtiennent le libellé auprès de Gecka Geolocation."
+
+#: inc/core/MaxMind/Provider.php:140
+msgid "Account ID"
+msgstr "Identifiant du compte"
+
+#: inc/core/MaxMind/Provider.php:143
+msgid "The account ID is a number. It was not saved."
+msgstr "L’identifiant du compte est un nombre. Il n’a pas été enregistré."
+
+#: inc/core/MaxMind/Provider.php:146
+msgid "Licence key"
+msgstr "Clé de licence"
+
+#: inc/core/MaxMind/Provider.php:149
+msgid "A licence key holds letters, digits and underscores only. It was not saved."
+msgstr "Une clé de licence ne contient que des lettres, des chiffres et des tirets bas. Elle n’a pas été enregistrée."
+
+#: inc/core/MaxMind/Provider.php:232
+msgid "MaxMind refused the account ID or the licence key. A key just created can take up to a quarter of an hour to be activated by MaxMind."
+msgstr "MaxMind a refusé l’identifiant du compte ou la clé de licence. Une clé qui vient d’être créée peut mettre jusqu’à un quart d’heure à être activée par MaxMind."
+
+#. translators: %s: name of a database
+#: inc/core/MaxMind/Provider.php:234
+#, php-format
+msgid "The MaxMind account has no access to %s."
+msgstr "Le compte MaxMind n’a pas accès à %s."
+
+#: inc/core/MaxMind/Provider.php:235
+msgid "The MaxMind account reached its daily download limit. The download is tried again later."
+msgstr "Le compte MaxMind a atteint sa limite quotidienne de téléchargements. Le téléchargement sera retenté plus tard."
+
+#. translators: 1: address of the sign-up page, 2: address of the licence keys page
+#: inc/core/MaxMind/Provider.php:291
+#, php-format
+msgid "The databases come from MaxMind, with the account ID and a licence key of your account. A <a href=\"%1$s\">free GeoLite account</a> downloads GeoLite Country, City and ASN; a paid subscription the GeoIP databases it covers. Licence keys are made on the <a href=\"%2$s\">licence keys page</a> of the account."
+msgstr "Les bases viennent de MaxMind, avec l’identifiant et une clé de licence de votre compte. Un <a href=\"%1$s\">compte GeoLite gratuit</a> télécharge GeoLite Country, City et ASN ; un abonnement payant, les bases GeoIP qu’il couvre. Les clés de licence se créent sur la <a href=\"%2$s\">page des clés de licence</a> du compte."
+
+#: inc/core/Mmdb/Archive.php:78
+#: inc/core/Tar.php:65
+msgid "PHP lacks the zlib extension, which reads the archives."
+msgstr "Il manque à PHP l’extension zlib, qui lit les archives."
+
+#. translators: %s: file on the server
+#: inc/core/Mmdb/Archive.php:88
+#: inc/core/Tar.php:72
+#, php-format
+msgid "Cannot read %s."
+msgstr "Impossible de lire %s."
+
+#. translators: %s: file on the server
+#: inc/core/Mmdb/Archive.php:99
+#: inc/core/Mmdb/Archive.php:142
+#: inc/core/Mmdb/Updater.php:783
+#: inc/core/Tar.php:279
+#: inc/core/Tar.php:292
+#, php-format
+msgid "Cannot write %s."
+msgstr "Impossible d’écrire %s."
+
+#: inc/core/Mmdb/Archive.php:105
+#: inc/core/Tar.php:227
+#: inc/core/Tar.php:271
+msgid "The database unpacks to more than the plugin accepts."
+msgstr "La base, une fois décompressée, dépasse ce que l’extension accepte."
+
+#. translators: %s: name of a provider
+#: inc/core/Mmdb/Client.php:155
+#, php-format
+msgid "%s sent the download over an insecure address."
+msgstr "%s a envoyé le téléchargement vers une adresse non sécurisée."
+
+#: inc/core/Mmdb/Client.php:171
+msgid "Operation timed out."
+msgstr "Délai dépassé."
+
+#. translators: 1: name of a provider, 2: error
+#: inc/core/Mmdb/Client.php:175
+#, php-format
+msgid "Cannot reach %1$s: %2$s"
+msgstr "Impossible de joindre %1$s : %2$s"
+
+#. translators: %s: name of a provider
+#: inc/core/Mmdb/Client.php:187
+#, php-format
+msgid "%s redirected the download too many times."
+msgstr "%s a redirigé le téléchargement trop de fois."
+
+#. translators: %s: error
+#: inc/core/Mmdb/Databases.php:233
+#, php-format
+msgid "The database cannot be read: %s"
+msgstr "La base ne peut pas être lue : %s"
+
+#. translators: 1: type of database found, 2: name of the database expected
+#: inc/core/Mmdb/Databases.php:238
+#, php-format
+msgid "The file holds a %1$s database instead of %2$s."
+msgstr "Le fichier contient une base %1$s au lieu de %2$s."
+
+#. translators: %s: name of a provider
+#: inc/core/Mmdb/Provider.php:247
+#, php-format
+msgid "%s refused the credentials."
+msgstr "%s a refusé les identifiants."
+
+#. translators: 1: name of a provider, 2: name of a database
+#: inc/core/Mmdb/Provider.php:249
+#, php-format
+msgid "%1$s does not offer %2$s."
+msgstr "%1$s ne propose pas %2$s."
+
+#. translators: %s: name of a provider
+#: inc/core/Mmdb/Provider.php:251
+#, php-format
+msgid "%s limits the downloads for now. The download is tried again later."
+msgstr "%s limite les téléchargements pour l’instant. Le téléchargement sera retenté plus tard."
+
+#. translators: 1: name of a provider, 2: HTTP status code
+#: inc/core/Mmdb/Provider.php:253
+#, php-format
+msgid "%1$s answered with HTTP status %2$d."
+msgstr "%1$s a répondu avec le statut HTTP %2$d."
+
+#: inc/core/Mmdb/Provider.php:341
+msgid "City, network, ISP, connection type and domain"
+msgstr "Ville, réseau, fournisseur d’accès, type de connexion et domaine"
+
+#: inc/core/Mmdb/Provider.php:342
+msgid "Country, region, city, postal code and coordinates"
+msgstr "Pays, région, ville, code postal et coordonnées"
+
+#: inc/core/Mmdb/Provider.php:343
+msgid "Country, continent and autonomous system"
+msgstr "Pays, continent et système autonome"
+
+#: inc/core/Mmdb/Provider.php:344
+msgid "Country and continent"
+msgstr "Pays et continent"
+
+#: inc/core/Mmdb/Provider.php:345
+msgid "Autonomous system, ISP and organisation"
+msgstr "Système autonome, fournisseur d’accès et organisation"
+
+#: inc/core/Mmdb/Provider.php:346
+msgid "Autonomous system and its organisation"
+msgstr "Système autonome et son organisation"
+
+#: inc/core/Mmdb/Provider.php:347
+msgid "Connection type: cable/DSL, cellular, corporate, satellite"
+msgstr "Type de connexion : câble/DSL, mobile, entreprise, satellite"
+
+#: inc/core/Mmdb/Provider.php:348
+msgid "Domain of the address"
+msgstr "Domaine de l’adresse"
+
+#: inc/core/Mmdb/Provider.php:349
+msgid "VPN, hosting provider, proxy and Tor exit node"
+msgstr "VPN, hébergeur, proxy et nœud de sortie Tor"
+
+#. translators: %s: name of a provider
+#: inc/core/Mmdb/Updater.php:733
+#, php-format
+msgid "Enter the credentials of your %s account."
+msgstr "Saisissez les identifiants de votre compte %s."
+
+#. translators: %s: name of a provider
+#: inc/core/Mmdb/Updater.php:772
+#, php-format
+msgid "The download does not match the checksum %s publishes."
+msgstr "Le téléchargement ne correspond pas à la somme de contrôle publiée par %s."
+
+#. translators: %s: directory on the server
+#: inc/core/Storage.php:126
+#, php-format
+msgid "Cannot write in %s."
+msgstr "Impossible d’écrire dans %s."
+
+#: inc/core/Tar.php:87
+#: inc/core/Tar.php:250
+#: inc/core/Tar.php:287
+msgid "The archive is truncated."
+msgstr "L’archive est tronquée."
+
+#. translators: %s: end of a file name, as .mmdb
+#: inc/core/Tar.php:120
+#, php-format
+msgid "The archive holds no %s file."
+msgstr "L’archive ne contient aucun fichier %s."
+
+#: inc/core/Tar.php:155
+#: inc/core/Tar.php:173
+msgid "The archive declares a file too large to read."
+msgstr "L’archive annonce un fichier trop gros pour être lu."
+
+#: inc/core/Admin/DatabasesView.php:69
+msgid "The remaining databases download in the background. Reload the page in a minute."
+msgstr "Les bases restantes se téléchargent en arrière-plan. Rechargez la page dans une minute."
+
+#: inc/core/Admin/SiteHealth.php:58
+msgid "The directory of the databases of Gecka Geolocation"
+msgstr "Le dossier des bases de Gecka Geolocation"
+
+#: inc/core/Admin/SiteHealth.php:78
+#: inc/core/Admin/SiteHealth.php:93
+msgid "The directory of the databases of Gecka Geolocation is out of reach"
+msgstr "Le dossier des bases de Gecka Geolocation est hors d’atteinte"
+
+#: inc/core/Admin/SiteHealth.php:78
+msgid "The databases are kept in a directory the site chose, or none is downloaded yet."
+msgstr "Les bases sont conservées dans un dossier choisi par le site, ou aucune n’est encore téléchargée."
+
+#: inc/core/Admin/SiteHealth.php:88
+msgid "The directory of the databases of Gecka Geolocation is reachable from the web"
+msgstr "Le dossier des bases de Gecka Geolocation est accessible depuis le web"
+
+#: inc/core/Admin/SiteHealth.php:89
+msgid "The web server ignores the .htaccess that denies access to it, so anyone knowing its address can download the databases, which their licences forbid. Deny access to it in the configuration of the server, or set GECKA_GEOLOCATION_DIRECTORY in wp-config.php to a directory out of the web root."
+msgstr "Le serveur web ignore le .htaccess qui en interdit l’accès : quiconque connaît son adresse peut télécharger les bases, ce que leurs licences interdisent. Interdisez-en l’accès dans la configuration du serveur, ou définissez GECKA_GEOLOCATION_DIRECTORY dans wp-config.php vers un dossier hors de la racine web."
+
+#: inc/core/Admin/SiteHealth.php:93
+msgid "The web server answers nothing for its files."
+msgstr "Le serveur web ne répond rien pour ses fichiers."
+
+#. translators: %s: names of databases
+#: inc/core/Admin/SiteHealth.php:139
+#, php-format
+msgid "Missing or unreadable: %s. The download is tried again every hour while one is."
+msgstr "Manquante ou illisible : %s. Le téléchargement est retenté toutes les heures tant qu’une base l’est."
+
+#: inc/core/DbIp/Provider.php:156
+msgid "Country, region, city and coordinates"
+msgstr "Pays, région, ville et coordonnées"
+
+#: inc/core/IPinfo/Provider.php:188
+msgid "IPinfo gave no checksum to check the download against."
+msgstr "IPinfo n’a donné aucune somme de contrôle pour vérifier le téléchargement."
+
+#. translators: %s: name of a provider
+#: inc/core/Mmdb/Provider.php:203
+#, php-format
+msgid "%s sent a malformed checksum."
+msgstr "%s a envoyé une somme de contrôle mal formée."
+
+#: inc/core/Tar.php:97
+msgid "The archive declares a name too long to read."
+msgstr "L’archive déclare un nom trop long pour être lu."
+
+#: inc/core/Tar.php:167
+msgid "The archive is malformed."
+msgstr "L’archive est mal formée."

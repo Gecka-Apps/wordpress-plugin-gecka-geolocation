@@ -1,0 +1,54 @@
+{
+    "slug": "gecka-geolocation",
+    "title": "Gecka",
+    "page": "options-general.php?page=gecka-geolocation",
+    "viewport": { "width": 1280, "height": 800 },
+    "shots": [
+        {
+            "tab": "databases",
+            "query": { "ip": "8.8.8.8" },
+            "caption": "The Databases tab: each provider with its databases, their release and an update button."
+        },
+        {
+            "tab": "databases",
+            "query": { "ip": "8.8.8.8", "provider": "maxmind" },
+            "scroll": "#gecka-geolocation-lookup",
+            "caption": "An address tried out with any provider: country, flags, coordinates, time zone, network and its logo."
+        },
+        {
+            "tab": "maxmind",
+            "clip": { "from": ".gecka-admin-page-body form h2:nth-of-type(1)", "until": ".gecka-admin-page-body form h2:nth-of-type(2)" },
+            "caption": "MaxMind: the account ID and the licence key, typed in a masked field and kept out of the database with a constant if you prefer."
+        },
+        {
+            "tab": "maxmind",
+            "clip": { "from": ".gecka-admin-page-body form h2:nth-of-type(2)", "until": "p.submit" },
+            "caption": "MaxMind: the GeoLite databases, and the GeoIP ones a paid account covers, each checked every day."
+        },
+        {
+            "tab": "dbip",
+            "clip": { "from": ".gecka-admin-page-body form h2:nth-of-type(1)", "until": "p.submit" },
+            "caption": "DB-IP: no account, tick the Lite databases to download and save."
+        },
+        {
+            "tab": "ipinfo",
+            "clip": { "from": ".gecka-admin-page-body form h2:nth-of-type(1)", "until": "p.submit" },
+            "caption": "IPinfo: the access token and IPinfo Lite, updated every day."
+        },
+        {
+            "tab": "settings",
+            "clip": { "from": ".gecka-admin-page-body form h2:nth-of-type(1)", "until": ".gecka-admin-page-body form h2:nth-of-type(2)" },
+            "caption": "The provider answering the other plugins when they name none: by default, the first one with databases in place."
+        },
+        {
+            "tab": "settings",
+            "clip": { "from": ".gecka-admin-page-body form h2:nth-of-type(2)", "until": ".gecka-admin-page-body form h2:nth-of-type(3)" },
+            "caption": "WooCommerce located with the databases of the plugin, instead of its own MaxMind integration."
+        },
+        {
+            "tab": "settings",
+            "clip": { "from": ".gecka-admin-page-body form h2:nth-of-type(3)", "until": "p.submit" },
+            "caption": "The logos of the networks, downloaded once by the server and served from the uploads of the site."
+        }
+    ]
+}

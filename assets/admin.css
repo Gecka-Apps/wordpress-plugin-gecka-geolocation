@@ -1,0 +1,174 @@
+/*
+ * SPDX-FileCopyrightText: 2026 Gecka <contact@gecka.nc>
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
+/*
+ * The band, the tabs and the controls (switches, rows of buttons) come from
+ * gecka/wp-admin-menu; this sheet styles what the screens of the plugin
+ * hold. No colour is written here: the accent is the primary colour of the
+ * admin colour scheme, the neutral tones are mixed from the colour of the
+ * text.
+ */
+.gecka-geolocation {
+    --gecka-geolocation-muted: color-mix(in srgb, currentColor 75%, transparent);
+}
+
+/* The text of a switch wraps beside it, never under it. */
+.gecka-geolocation .form-table td > label.gecka-admin-toggle-label,
+.gecka-geolocation .form-table td fieldset label.gecka-admin-toggle-label {
+    align-items: flex-start;
+    display: flex;
+    gap: 6px;
+    margin: 0 0 12px;
+}
+
+.gecka-geolocation .gecka-admin-toggle {
+    flex: none;
+}
+
+.gecka-geolocation-badge {
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.6;
+    padding: 0 6px;
+    white-space: nowrap;
+}
+
+.gecka-geolocation-badge-yes {
+    background: rgba(var(--wp-admin-theme-color--rgb), 0.15);
+}
+
+.gecka-geolocation-badge-wait {
+    background: color-mix(in srgb, currentColor 10%, transparent);
+}
+
+.gecka-geolocation-badge-no {
+    border: 1px solid currentColor;
+    font-weight: 600;
+}
+
+.gecka-geolocation-databases code {
+    color: var(--gecka-geolocation-muted);
+    font-size: 12px;
+}
+
+.gecka-geolocation-update {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0;
+}
+
+.gecka-geolocation-update form {
+    margin: 0;
+}
+
+.gecka-geolocation-update progress {
+    width: 12em;
+}
+
+.gecka-geolocation-lookup {
+    margin: 8px 0 16px;
+}
+
+.gecka-geolocation-result {
+    max-width: 40em;
+}
+
+.gecka-geolocation-result th {
+    width: 12em;
+}
+
+.gecka-geolocation-attribution,
+.gecka-geolocation-directory {
+    color: var(--gecka-geolocation-muted);
+    margin-top: 24px;
+}
+
+.gecka-geolocation-flag {
+    box-shadow: 0 0 0 1px color-mix(in srgb, currentColor 15%, transparent);
+    display: block;
+    height: 32px;
+    width: auto;
+}
+
+.gecka-geolocation-result td.gecka-geolocation-emoji {
+    font-size: 28px;
+    line-height: 32px;
+}
+
+.gecka-geolocation-logo {
+    display: block;
+    height: 32px;
+    object-fit: contain;
+    width: 32px;
+}
+
+/*
+ * A secret is typed in a text field this sheet masks, which the password
+ * managers leave alone, and the button in the field reveals.
+ */
+.gecka-geolocation-masked {
+    -webkit-text-security: disc;
+}
+
+/* The wrapper takes the height of the field alone, so that the button
+ * fills exactly the field. */
+.gecka-geolocation-secret {
+    display: inline-flex;
+    position: relative;
+    vertical-align: middle;
+}
+
+.gecka-geolocation-secret .gecka-geolocation-masked {
+    margin: 0;
+    padding-right: 2.5rem;
+}
+
+.gecka-geolocation-secret.is-revealed .gecka-geolocation-masked {
+    -webkit-text-security: none;
+}
+
+.gecka-geolocation .button.gecka-geolocation-reveal {
+    align-items: center;
+    background: transparent;
+    border: 1px solid transparent;
+    bottom: 0;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    min-height: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2.5rem;
+}
+
+.gecka-geolocation .button.gecka-geolocation-reveal .dashicons {
+    font-size: 20px;
+    height: 20px;
+    line-height: 1;
+    width: 20px;
+}
+
+.gecka-geolocation .button.gecka-geolocation-reveal:hover,
+.gecka-geolocation .button.gecka-geolocation-reveal:active {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    transform: none;
+}
+
+.gecka-geolocation .button.gecka-geolocation-reveal:focus {
+    background: transparent;
+    border-color: var(--wp-admin-theme-color);
+    border-radius: 2px;
+    box-shadow: 0 0 0 var(--wp-admin-border-width-focus, 1.5px) var(--wp-admin-theme-color);
+    outline: 2px solid transparent;
+}

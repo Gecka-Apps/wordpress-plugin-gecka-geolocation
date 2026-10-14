@@ -27,7 +27,7 @@ class Plugin
     /**
      * Version of the plugin.
      */
-    public const VERSION = '1.0.0';
+    public const VERSION = '1.0.1';
 
     /**
      * Records kept for the request at most.

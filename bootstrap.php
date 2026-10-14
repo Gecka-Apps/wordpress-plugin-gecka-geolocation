@@ -9,7 +9,7 @@ declare(strict_types=1);
  * Plugin Name: Gecka Geolocation
  * Plugin URI: https://github.com/Gecka-Apps/wordpress-plugin-gecka-geolocation
  * Description: Downloads the IP geolocation databases of MaxMind (GeoLite or GeoIP®), DB-IP and IPinfo, keeps them up to date, and lets other plugins and WooCommerce locate an IP address on the server.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Gecka
  * Author URI: https://gecka.nc
  * License: GPL-3.0-or-later

@@ -4,7 +4,7 @@ Tags: geolocation, geoip, maxmind, db-ip, ipinfo
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -148,6 +148,11 @@ MaxMind limits the downloads of an account each day. The plugin only downloads a
 9. The logos of the networks, downloaded once by the server and served from the uploads of the site.
 
 == Changelog ==
+
+= 1.0.1 =
+
+* The error of a database outdated past the limit of its licence shows on the dashboard and the plugins screen, no longer on every admin screen.
+* Admin page styled on sites that install the plugin through their own Composer, and notices spaced like those of Site Health.
 
 = 1.0.0 =
 * First release: downloads and updates of the databases of MaxMind (GeoLite and GeoIP), DB-IP (Lite) and IPinfo (Lite), lookups and credits for other plugins, WooCommerce geolocation, network settings on a multisite, Site Health tests.

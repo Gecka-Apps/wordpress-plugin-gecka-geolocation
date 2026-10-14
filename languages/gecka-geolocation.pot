@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-3.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Gecka Geolocation 1.0.0\n"
+"Project-Id-Version: Gecka Geolocation 1.0.1\n"
 "Report-Msgid-Bugs-To: https://github.com/Gecka-Apps/wordpress-plugin-gecka-geolocation/issues\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-13T13:39:24+11:00\n"
+"POT-Creation-Date: 2026-10-14T16:38:45+11:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: gecka-geolocation\n"
@@ -296,12 +296,12 @@ msgstr ""
 msgid "Network"
 msgstr ""
 
-#: inc/core/Admin/Notices.php:50
+#: inc/core/Admin/Notices.php:51
 msgid "See the databases"
 msgstr ""
 
 #. translators: 1: names of databases, 2: number of days, 3: name of the provider
-#: inc/core/Admin/Notices.php:70
+#: inc/core/Admin/Notices.php:71
 #, php-format
 msgid "Gecka Geolocation could not update %1$s for more than %2$d days after %3$s released a newer one. The licence of %3$s asks that an outdated release be deleted after %2$d days: lookups go on, but the database must be updated or removed."
 msgid_plural "Gecka Geolocation could not update %1$s for more than %2$d days after %3$s released newer ones. The licence of %3$s asks that an outdated release be deleted after %2$d days: lookups go on, but the databases must be updated or removed."

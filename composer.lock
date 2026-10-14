@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "528d7c5306382b478063bf4174e500c1",
+    "content-hash": "44ea9839ce26cc358da5af05897f9753",
     "packages": [
         {
             "name": "composer/installers",
@@ -154,16 +154,16 @@
         },
         {
             "name": "gecka/wp-admin-menu",
-            "version": "v1.2.0",
+            "version": "v1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Gecka-Apps/wp-admin-menu.git",
-                "reference": "42ce690685ad3469e808447e3dd55668406f5df9"
+                "reference": "4123cfe86268ab65529deca97226b103b989b2c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Gecka-Apps/wp-admin-menu/zipball/42ce690685ad3469e808447e3dd55668406f5df9",
-                "reference": "42ce690685ad3469e808447e3dd55668406f5df9",
+                "url": "https://api.github.com/repos/Gecka-Apps/wp-admin-menu/zipball/4123cfe86268ab65529deca97226b103b989b2c5",
+                "reference": "4123cfe86268ab65529deca97226b103b989b2c5",
                 "shasum": ""
             },
             "require": {
@@ -207,7 +207,7 @@
                 "issues": "https://github.com/Gecka-Apps/wp-admin-menu/issues",
                 "source": "https://github.com/Gecka-Apps/wp-admin-menu"
             },
-            "time": "2026-10-08T13:07:02+00:00"
+            "time": "2026-10-14T05:08:49+00:00"
         }
     ],
     "packages-dev": [

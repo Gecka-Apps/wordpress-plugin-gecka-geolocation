@@ -5,6 +5,7 @@ declare(strict_types=1);
 // SPDX-FileCopyrightText: 2026 Gecka <contact@gecka.nc>
 // SPDX-License-Identifier: GPL-3.0-or-later
 
+use Gecka\WP\Plugin\Geolocation\Admin\Notices;
 use Gecka\WP\Plugin\Geolocation\MaxMind\Provider as MaxMind;
 use Gecka\WP\Plugin\Geolocation\Mmdb\Updater;
 use Gecka\WP\Plugin\Geolocation\Storage;
@@ -226,6 +227,35 @@ it('tells a database past the limit of its licence', function () {
 
     // Lookups go on all the same.
     expect(gecka_geolocation_country('81.2.69.142'))->toBe('GB');
+});
+
+it('tells a database past the limit of its licence on the dashboard and the plugins screen only', function () {
+    require_once ABSPATH . 'wp-admin/includes/screen.php';
+    require_once ABSPATH . 'wp-admin/includes/class-wp-screen.php';
+    install_fixture('GeoLite2-Country');
+    update_site_option(updater()->option(), ['checked' => time() - 31 * DAY_IN_SECONDS, 'editions' => ['GeoLite2-Country' => ['installed' => time() - 40 * DAY_IN_SECONDS, 'remote' => 0]]]);
+    $admin = wp_insert_user(['user_login' => 'notice-' . wp_generate_password(6, false), 'user_pass' => wp_generate_password(), 'role' => 'administrator']);
+    wp_set_current_user($admin);
+
+    if (is_multisite()) {
+        grant_super_admin($admin);
+    }
+
+    $notice = function (string $screen): string {
+        set_current_screen($screen);
+        ob_start();
+        (new Notices(gecka_geolocation_plugin()))->stale();
+
+        return (string) ob_get_clean();
+    };
+
+    expect($notice('dashboard'))->toContain('could not update GeoLite Country')
+        ->and($notice('plugins'))->toContain('could not update GeoLite Country')
+        ->and($notice('edit-post'))->toBe('')
+        ->and($notice('upload'))->toBe('');
+
+    unset($GLOBALS['current_screen']);
+    wp_set_current_user(0);
 });
 
 it('asks MaxMind which databases the account has', function () {

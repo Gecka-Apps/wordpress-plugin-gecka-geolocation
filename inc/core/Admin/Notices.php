@@ -7,16 +7,16 @@ declare(strict_types=1);
 
 namespace Gecka\WP\Plugin\Geolocation\Admin;
 
-use Gecka\WP\AdminMenu\Menus;
 use Gecka\WP\Plugin\Geolocation\Base;
 use Gecka\WP\Plugin\Geolocation\Mmdb\Provider as MmdbProvider;
 use Gecka\WP\Plugin\Geolocation\Plugin;
 
 /**
- * An error on every admin screen of those who manage the plugin, in the
- * network admin on a multisite, while a database installed is past the delay
- * the licence of its provider allows once a new release is out. The lookups
- * go on meanwhile.
+ * An error on the dashboard and the plugins screen of those who manage the
+ * plugin, in the network admin on a multisite, while a database installed is
+ * past the delay the licence of its provider allows once a new release is
+ * out. The page of the plugin tells it in the block of the provider. The
+ * lookups go on meanwhile.
  *
  * @author Laurent Dinclaux - Gecka <laurent@gecka.nc>
  */
@@ -31,14 +31,15 @@ class Notices extends Base
     }
 
     /**
-     * Prints the error, but on the page of the plugin, which tells it in
-     * its own place.
+     * Prints the error on the dashboard and the plugins screen.
      *
      * @return void
      */
     public function stale(): void
     {
-        if (! current_user_can(Plugin::capability()) || Menus::current()?->slug() === SettingsPage::PAGE) {
+        $screen = function_exists('get_current_screen') ? get_current_screen() : null;
+
+        if (! $screen || ! in_array($screen->base, ['dashboard', 'plugins'], true) || ! current_user_can(Plugin::capability())) {
             return;
         }
 
